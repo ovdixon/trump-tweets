@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Baskerville-Bold';
+    src: url('fonts/Baskerville-Bold.ttf'); 
+}
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('fonts/Baskerville.ttf'); 
+}
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    width: clamp(100px, 50%, 650px);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Baskerville-Bold';
+    font-size: 2.5em;
+    color: #0A6E54;
+}
+
+p {
+    font-family: 'Baskerville';
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.divider{
+    border: 1px solid #0A6E54;
+    width: 350px;
+
+}
+
+.infolayer [class^='y'][class$='title'] {
+    transform: rotate(0deg) translate(16px, -30px);
+  }
+  
+
+
