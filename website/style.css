@@ -11,6 +11,7 @@
 body{
     display: grid;
     place-items: center;
+    font-family: 'Baskerville';
 }
 
 .container{
@@ -23,20 +24,51 @@ body{
 h1 {
     text-align: center;
     font-family: 'Baskerville-Bold';
-    font-size: 2.5em;
+    font-size: 3.5em;
     color: #0A6E54;
+}
+
+.author{
+    color: #cfcfcf;
+    text-decoration: none;
+    text-align: right;
+    margin-right: 60px;
 }
 
 p {
     font-family: 'Baskerville';
     text-align: justify;
     line-height: 1.5em;
+    font-size: 1.1em;
 }
 
 .divider{
-    border: 1px solid #0A6E54;
-    width: 350px;
+    border: 1px solid #ebebeb;
+    width: 500px;
 
+}
+
+.plotly{
+    width: 90%;
+}
+
+.image-row{
+    display: flex;
+    padding: 10px;
+}
+
+.image-column{
+    display: inline-block;
+    padding: 5px;
+}
+
+figcaption{
+    font-family: 'Baskerville-Bold';
+    text-align: center;
+}
+
+.footnote{
+    font-size: 0.8em;
 }
 
 .infolayer [class^='y'][class$='title'] {

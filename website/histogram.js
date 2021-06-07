@@ -40,7 +40,7 @@ Plotly.d3.csv("data/export.csv", function (csv_data) {
             color: "rgba(255, 180, 64, 0.6)",
             line: {
                 color:  "rgba(255, 180, 64, 1)", 
-                width: 1
+                width: 2
             } 
          },
         opacity: 0.75 
@@ -72,7 +72,7 @@ Plotly.d3.csv("data/export.csv", function (csv_data) {
             color: "rgba(10, 110, 84, 0.6)", 
              line: {
               color:  "rgba(10, 110, 84, 1)", 
-              width: 1
+              width: 2
             }
           },
         opacity: 0.5  
@@ -85,12 +85,11 @@ Plotly.d3.csv("data/export.csv", function (csv_data) {
 
     var layout = {
         title: {
-            text:'How Trump tweets while golfing',
+            text:'Trump tweets less at the tee',
             font: {
                 family: 'Baskerville-Bold',
                 size: 18
             },
- 
           },
         font: {
             family: 'Baskerville',
@@ -101,17 +100,17 @@ Plotly.d3.csv("data/export.csv", function (csv_data) {
             title: "Time"
         },
         yaxis: {
-            title: "% of<br>daily<br>tweets",
-            xref: 'paper',
-            x: 0.5,
-            range: [0,16]
+            title: {
+                text: "% of<br>daily<br>tweets",
+                standoff: 100
+            }
         },
         barmode: 'overlay',
         updatemenus: [{
             type: 'buttons',
             x: 1.05,
             xanchor: 'left',
-            y: 0.7,
+            y: 0.55,
             yanchor: 'top',
             buttons: [{  
                 label: 'negative',
@@ -133,10 +132,24 @@ Plotly.d3.csv("data/export.csv", function (csv_data) {
                 }], [0,1]]
               }
         ]
-        }]
+        }],
+        annotations: [{
+            xref: 'paper',
+            yref: 'paper',
+            x: 1.195,
+            xanchor: 'right',
+            y: 0.58,
+            yanchor: 'bottom',
+            text: 'Tweet <br>sentiment',
+            showarrow: false,
+            font: {
+                size: 15
+            },
+          }]
+          
     }
 
-    Plotly.newPlot('histogram', {
+    Plotly.newPlot('plot2', {
         data: data,
         layout: layout
       });
