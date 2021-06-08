@@ -4,7 +4,7 @@ Plotly.d3.csv("data/graph1.csv", function (csv_data) {
     var date = csv_data.map(d => d.date);
     var golf = csv_data.map(d => d.golf);
     var tweets = csv_data.map(d => d.tweets);
-    var positive = csv_data.map(d => d.pos);
+    var positive = csv_data.map(d => d.positive);
     var negative = csv_data.map(d => d.negative);
 
 
@@ -34,13 +34,11 @@ Plotly.d3.csv("data/graph1.csv", function (csv_data) {
         }
     };
 
-
-
     var data = [golf_trace, tweets_trace];
 
     var layout = {
         title: {
-            text:'Negative tweets to golf outings',
+            text:'Less golfing, more ranting',
             font: {
                 family: 'Baskerville-Bold',
                 size: 18
@@ -69,7 +67,7 @@ Plotly.d3.csv("data/graph1.csv", function (csv_data) {
           range: [0,25],
           showgrid: false,
           title: {
-            text: "golf<br>trips",
+            text: "monthly<br>golf trips",
         }
         },
         yaxis:{

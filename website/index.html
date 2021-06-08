@@ -11,25 +11,37 @@
         <h1>If only Trump had <br>played more golf</h1>
         <hr class="divider">
         <a class="author" href="https://ovdixon.com" target="_blank">by Ollie Dixon</a><br>
-        <p>What happened when I was given a dataset of over sixteen-thousand Donald Trump tweets and told to tell a story. Well, firstly I sighed… because, like many, I have developed an acute case of TFS (trump fatigue syndrome). Symptoms are characterised by an induced state of watching the same shitty soap opera on repeat. Only to sober up and realise this is not Home and Away, this is America. </p>
 
-        <p>So to save myself the pain of analysing his tweets in isolation, I had to branch out. And if there is one thing Trump loves more than himself, it's golf. In fact he loves it so much he made 298 visits to the golf course since his inauguration, with evidence that he teed off on over 150 of these visits. At an estimated cost for the American taxpayer, an eye-watering $146 million USD. This is all according to Trump Golf Count, a website that meticulously logs and shares the former presidents “exercise regimen”. So with a second dataset at hand, I was ready to explore the habits of a president who is “far more emotionally invested in golf than politics.” <sup>1</sup></p>
+        
+
+        <p>What happened when I was given a dataset of over sixteen-thousand Donald Trump tweets and told to tell a story. Well, firstly I swore… because, like many, I had developed an acute case of TFS (trump fatigue syndrome). Symptoms are characterised by an induced state of watching the same shitty soap opera on repeat. Only to sober up and realise, this is not Home and Away, this is America. </p>
+
+        <p>So to save myself the pain of analysing Trump's tweets in isolation, I had to branch out. And if there is one thing Trump loves more than himself, it's golf. In fact he loves it so much he made 298 visits to the golf course since his inauguration, with evidence that he teed off on over 150 of these visits. At an estimated cost for the American taxpayer, an eye-watering $146 million USD. This is all according to Trump Golf Count, a website that meticulously logs and shares the former presidents “exercise regimen”. So with a second dataset at hand, I was ready to explore the habits of a president who is “far more emotionally invested in golf than politics.” <sup>1</sup></p>
 
         <p>Before launching into a graph, let’s first understand a little about the data. The trump twitter dataset includes the time stamp, raw text and a sentiment analysis of each tweet. The original archive of tweets can be accessed <a href="https://trumpgolfcount.com/displayfaq" target="_blank">here</a>. The sentiment is a calculation of how positive or negative the language in the tweet is. It was calculated using TextBlob, not a perfect algorithm by any means, but accurate enough to be interesting. Below are two example tweets on either end of the sentiment spectrum.</p>
 
         <div class="image-row">
             <div class="image-column">
-                <img src="img/tweet.png" alt="Tweet" style="width:100%">
+                <img src="img/negative.png" alt="Tweet" style="width:100%">
                 <figcaption>negative </figcaption>
             </div>
             <div class="image-column">
-                <img src="img/tweet.png" alt="Tweet" style="width:100%">
+                <img src="img/positive.png" alt="Tweet" style="width:100%">
                 <figcaption> positive </figcaption>
             </div>
         </div>
 
         <p>The golf count dataset includes the date, hours at the club, and whether golf was played, for any time Trump visited a location whose primary offering is golf (i.e., a “golf club). The data is sourced from White House press pool reports. You can read more about the dataset <a href="https://trumpgolfcount.com/displayfaq" target="_blank">here</a>.</p>
+
+        <p>Golf, like many sports, has significant mental and physical health benefits. Particularly for older players, like 74-year old Trump. On the physical side, players benefit from improved muscle strength and balance. While the outdoor setting and social interaction that comes with playing has  been shown to provide stress-reduction and restoration from mental fatigue.<sup>2</sup> Given Trump’s habitual twitter rants, it may seem that his 298 golf days were spent in vain. Or that he is immune to the calming and restorative benefits of the sport. Well, the data tells a slightly different story.</p>
+
         <div class="plotly" id="plot1" ></div>
+
+        <p>When Trump plays less golf, he sends off more angry tweets. Take October of 2020 for example, Trump played golf only’ 4 times, and sent out a record 151 negative tweets. It is comical to think that he fills the void of not being able to tee off, through online tirades at his opponents. However, it is a trend that emerged during the second half of his presidency.  Perhaps, a delayed realisation that running the world's largest economy by nominal GDP, requires taking a few days off the course. But who can blame him, Golf clearly has powerful mental health benefits and Trump's twitter feed is simply testament to that.</p>
+
+        <p>The Golf Count dataset provides the specific hours Trump spent at a club. Correlating this data with the timestamp of tweets, we can build a picture of how Trump tweets while actually on the course.</p>
+
+
         <div class="plotly" id="plot2" ></div>
 
         
@@ -38,11 +50,16 @@
             <li>add typical golfing hours to plot 2</li>
             <li>pos. & neg. buttons to plot 1</li>
             <li>border around plots</li>
+            <li>GIF</li>
         </ul>
+
+        
 
         <hr class="divider">
 
          <p class="footnote"><sup>1</sup>  Eamon Lynch, E. L. (2021, 13 Jan), How the PGA Polished Off Donald Trump, Vanity Fair</p>
+
+         <p class="footnote"><sup>2</sup>  Keely Levins, K. L. (2020, 15 Mar), 5 mental health benefits you get from golf, Golf Digest</p>
 
     </div>
 
