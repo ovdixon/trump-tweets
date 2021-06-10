@@ -15,7 +15,7 @@ body{
 }
 
 .container{
-    width: clamp(100px, 50%, 650px);
+    width: 650px;
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -53,7 +53,7 @@ img {
 }
 
 .plotly{
-    width: 90%;
+    width: 100%;
 }
 
 .image-row{
@@ -64,6 +64,7 @@ img {
 .image-column{
     display: inline-block;
     padding: 5px;
+    
 }
 
 figcaption{
@@ -76,8 +77,55 @@ figcaption{
 }
 
 .infolayer [class^='y'][class$='title'] {
-    transform: rotate(0deg) translate(16px, -30px);
-  }
+    transform: rotate(0deg) translate(16px, -10px);
+}
   
 
+
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    h1{
+      font-size: 5em;
+    }
+
+    .divider{
+    border: 3px solid #ebebeb;
+    width: 600px;
+    }
+
+    .author{
+    font-size: 2em;
+    margin-right: 105px;
+}
+
+    p{
+        font-size: 2.5em;
+    }
+
+    figcaption{
+      font-size: 1.8em;
+    }
+
+    .container{
+        width: 800px;
+    }
+
+    .infolayer [class^='y'][class$='title'] {
+        transform: rotate(0deg) translate(14px, 0px);
+    }
+
+    .image-row{
+        flex-direction: column;
+    }
+
+
+.image-column{
+    margin-bottom: 20px;
+    
+}
+
+}
 

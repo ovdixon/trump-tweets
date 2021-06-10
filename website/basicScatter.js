@@ -64,7 +64,7 @@ Plotly.d3.csv("data/export.csv", function (csv_data) {
         },
         yaxis: {
             title: "tweet sentiment"
-        }
+        }  
         
     }
 
