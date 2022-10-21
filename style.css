@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Baskerville-Bold';
+    src: url('fonts/Baskerville-Bold.ttf'); 
+}
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('fonts/Baskerville.ttf'); 
+}
+
+body{
+    display: grid;
+    place-items: center;
+    font-family: 'Baskerville';
+}
+
+.container{
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Baskerville-Bold';
+    font-size: 3.5em;
+    color: #0A6E54;
+}
+
+.author{
+    color: #cfcfcf;
+    text-decoration: none;
+    text-align: right;
+    margin-right: 80px;
+}
+
+p {
+    font-family: 'Baskerville';
+    text-align: justify;
+    line-height: 1.5em;
+    font-size: 1.1em;
+}
+
+.divider{
+    border: 1px solid #ebebeb;
+    width: 500px;
+
+}
+
+img {
+    border: 1px solid #ebebeb;
+}
+
+.plotly{
+    width: 100%;
+}
+
+.image-row{
+    display: flex;
+    padding: 10px;
+}
+
+.image-column{
+    display: inline-block;
+    padding: 5px;
+    
+}
+
+figcaption{
+    font-family: 'Baskerville-Bold';
+    text-align: center;
+}
+
+.footnote{
+    font-size: 0.8em;
+}
+
+.infolayer [class^='y'][class$='title'] {
+    transform: rotate(0deg) translate(16px, -10px);
+}
+  
+
+
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    h1{
+      font-size: 5em;
+    }
+
+    .divider{
+    border: 3px solid #ebebeb;
+    width: 600px;
+    }
+
+    .author{
+    font-size: 2em;
+    margin-right: 105px;
+}
+
+    p{
+        font-size: 2.5em;
+    }
+
+    figcaption{
+      font-size: 1.8em;
+    }
+
+    .container{
+        width: 800px;
+    }
+
+    .infolayer [class^='y'][class$='title'] {
+        transform: rotate(0deg) translate(14px, 0px);
+    }
+
+    .image-row{
+        flex-direction: column;
+    }
+
+
+.image-column{
+    margin-bottom: 20px;
+    
+}
+
+}
+
